@@ -134,6 +134,8 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'staticfiles/media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 #Here we are defining that after login in which page djago should redirec us.
+LOGIN_URL = "/auth/login"
 LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = '/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

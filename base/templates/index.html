@@ -48,7 +48,6 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="slides">
-						
 						<img src="{% static 'images/hero-slider-1.jpg' %}" alt="Image" class="img-fluid active">
 						<img src="{% static 'images/hero-slider-2.jpg' %}" alt="Image" class="img-fluid">
 						<img src="{% static 'images/hero-slider-3.jpg' %}" alt="Image" class="img-fluid">
@@ -70,17 +69,15 @@
 				</div>
 			</div>
 			<div class="row align-items-stretch">
-				<div class="col-lg-4 order-lg-1">
-					<div class="h-100"><div class="frame h-100"><div class="feature-img-bg h-100" style="background-image: url('static/images/hero-slider-1.jpg');"></div></div></div>
-				</div>
+				
 
-				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
+				<div class="col-6 col-sm-6 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
 
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
 							<span class="flaticon-house display-4 text-primary"></span>
 							<h3>Beautiful Condo</h3>
-							<p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+							<p class="mb-0">Make your trip more secure, safer, and more enjoyable.</p>
 						</div>
 					</div>
 
@@ -88,19 +85,19 @@
 						<div class="align-self-center">
 							<span class="flaticon-restaurant display-4 text-primary"></span>
 							<h3>Restaurants & Cafe</h3>
-							<p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+							<p class="mb-0">We will launch this service very soon.</p>
 						</div>
 					</div>
 
 				</div>
 
-				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3" >
+				<div class="col-6 col-sm-6 feature-1-wrap d-md-flex flex-md-column order-lg-3" >
 
 					<div class="feature-1 d-md-flex">
 						<div class="align-self-center">
 							<span class="flaticon-mail display-4 text-primary"></span>
 							<h3>Easy to Connect</h3>
-							<p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+							<p class="mb-0">You can reach us via call, email, and website 24/7.</p>
 						</div>
 					</div>
 
@@ -108,7 +105,8 @@
 						<div class="align-self-center">
 							<span class="flaticon-phone-call display-4 text-primary"></span>
 							<h3>24/7 Support</h3>
-							<p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+							<p class="mb-0">Phone: 01773023181</p>
+							<p class="mb-0">SoS: 999></p>
 						</div>
 					</div>
 
@@ -167,69 +165,17 @@
 
 			<div class="owl-carousel owl-3-slider">
 
-				{% for place in packages_objects %}
+				{% for place in destination_Objects %}
 				<div class="item">
-					<a class="media-thumb" href="/media/{{place.image1}}" data-fancybox="gallery">
+					<a class="media-thumb" href="/media/{{place.images}}" data-fancybox="gallery">
 						<div class="media-text">
-							<h3>{{place.title}}</h3>
+							<h3>{{place.spot_Title}}</h3>
 							<span class="location">{{place.place_Title}}</span>
 						</div>
-						<img src="/media/{{place.image1}}" alt="Image" class="img-fluid" />
+						<img src="/media/{{place.images}}" alt="Image" class="img-fluid" />
 					</a> 
 				</div>
 				{%endfor%}
-
-				<!--<div class="item">
-					<a class="media-thumb" href="static/images/hero-slider-2.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Oia</h3>
-							<span class="location">Greece</span>
-						</div>
-						<img src="static/images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="static/images/hero-slider-3.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Perhentian Islands</h3>
-							<span class="location">Malaysia</span>
-						</div>
-						<img src="static/images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-
-				<div class="item">
-					<a class="media-thumb" href="static/images/hero-slider-4.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Rialto Bridge</h3>
-							<span class="location">Italy</span>
-						</div>
-						<img src="static/images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="static/images/hero-slider-5.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>San Francisco, United States</h3>
-							<span class="location">United States</span>
-						</div>
-						<img src="static/images/hero-slider-5.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="static/images/hero-slider-1.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Lake Thun</h3>
-							<span class="location">Switzerland</span>
-						</div>
-						<img src="static/images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div> -->
-
 			</div>
 
 		</div>
@@ -247,16 +193,13 @@
 			<div class="row">
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="{% static 'images/hero-slider-1.jpg' %}" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
-						</span>
+						<img src="{% static 'images/kuakata.jpg' %}" alt="Image" class="img-fluid">
+						
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Rialto Mountains</a></h3>
+								<h3>Kuakata</h3>
 								<div class="price ml-auto">
-									<span>$520.00</span>
+									<span> 3000 ৳</span>
 								</div>
 							</div>
 							
@@ -266,16 +209,13 @@
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="{% static 'images/hero-slider-2.jpg' %}" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>United States</span>
-						</span>
+						<img src="{% static 'images/saintmartin.jpg' %}" alt="Image" class="img-fluid">
+						
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">San Francisco</a></h3>
+								<h3>SSaint Martins Island</h3>
 								<div class="price ml-auto">
-									<span>$520.00</span>
+									<span> 5000 ৳</span>
 								</div>
 							</div>
 							
@@ -285,16 +225,13 @@
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="{% static 'images/hero-slider-3.jpg' %}" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
-						</span>
+						<img src="{% static 'images/Sajek.jpg' %}" alt="Image" class="img-fluid">
+						
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Perhentian Islands</a></h3>
+								<h3>Sajek Valley</h3>
 								<div class="price ml-auto">
-									<span>$750.00</span>
+									<span> 3500 ৳</span>
 								</div>
 							</div>
 							
@@ -304,18 +241,12 @@
 				</div>
 				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
 					<div class="media-1">
-						<a href="#" class="d-block mb-3"><img src="{% static 'images/hero-slider-4.jpg' %}" alt="Image" class="img-fluid"></a>
-
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Switzerland</span>
-						</span>
-
+						<img src="{% static 'images/ultimatePackage.jpg' %}" alt="Image" class="img-fluid">
 						<div class="d-flex align-items-center">
 							<div>
-								<h3><a href="#">Lake Thun</a></h3>
+								<h3>Cox's Bazar</h3>
 								<div class="price ml-auto">
-									<span>$520.00</span>
+									<span>4000 ৳</span>
 								</div>
 							</div>
 							
@@ -326,52 +257,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- /*
-		video show code panel:
-		
-	<div class="untree_co-section">
-		<div class="container">
-			<div class="row justify-content-between align-items-center">
-				
-				<div class="col-lg-6">
-					<figure class="img-play-video">
-						<a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU" data-fancybox>
-							<span></span>
-						</a>
-						<img src="static/images/hero-slider-2.jpg" alt="Image" class="img-fluid rounded-20">
-					</figure>
-				</div>
-
-				<div class="col-lg-5">
-					<h2 class="section-title text-left mb-4">Take a look at Tour Video</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-					<p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-
-					<ul class="list-unstyled two-col clearfix">
-						<li>Outdoor recreation activities</li>
-						<li>Airlines</li>
-						<li>Car Rentals</li>
-						<li>Cruise Lines</li>
-						<li>Hotels</li>
-						<li>Railways</li>
-						<li>Travel Insurance</li>
-						<li>Package Tours</li>
-						<li>Insurance</li>
-						<li>Guide Books</li>
-					</ul>
-
-					<p><a href="#" class="btn btn-primary">Get Started</a></p>
-
-					
-				</div>
-			</div>
-		</div>
-	</div>
-*/ -->
-	
-	
 	<div class="py-5 cta-section">
 		<div class="container">
 			<div class="row text-center">

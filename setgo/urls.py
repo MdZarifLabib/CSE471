@@ -4,6 +4,9 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.contrib.auth import views as auth_views
+from setgo import settings
+
 from base import views
 
 urlpatterns = [
@@ -26,8 +29,11 @@ urlpatterns = [
     #path for login:
     path('auth/',include('django.contrib.auth.urls')),
 
+    #path for logout:
+    path('auth/logout/', auth_views.LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='myapp_logout'),
+
     #path for signup:
-    path('signup/', include('account.urls')),
+    path('', include('account.urls')),
     
 ]
 if settings.DEBUG:
