@@ -1,0 +1,181 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+	{% block body %}
+
+
+
+    <div class="hero hero-inner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mx-auto text-center">
+              <div class="intro-wrap">
+                <h1 class="mb-0">Welcome</h1>
+                <p class="text-white">Please select your Luxury Adventure package. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  <div class="untree_co-section">
+    <div class="container">
+      <div class="row">
+        {% for touristSpots in packages_objects%}
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="media-1">
+            <a href="/luxuryitem/item2/{{touristSpots.id}}/" class="d-block mb-3"><img src="/media/{{touristSpots.image1}}" alt="Image" class="img-fluid"></a>
+            <div class="d-flex">
+              <div>
+                <h3><a href="#">{{touristSpots.title}}</a></h3>
+                <p>{{touristSpots.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+        <!--<div class="col-6 col-md-6 col-lg-3">
+          <div class="media-1">
+            <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
+            <div class="d-flex">
+              <div>
+                <h3><a href="#">Discovering Best</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="media-1">
+            <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
+            <div class="d-flex">
+              <div>
+                <h3><a href="#">A New Moments of Life</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="media-1">
+            <a href="#" class="d-block mb-3"><img src="static/images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
+            <div class="d-flex">
+              <div>
+                <h3><a href="#">Joy To Your Journey</a></h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="service text-center">
+            <span class="icon-paper-plane"></span>
+            <h3>Excellence in Travel</h3>
+            <p>Embark on a journey of excellence with our unparalleled travel experiences, tailored to create unforgettable adventures in Bangladesh.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="service text-center">
+            <span class="icon-tag"></span>
+            <h3>Discover Best</h3>
+            <p>Discover the very best of Bangladesh as we curate unparalleled experiences that unveil the country's hidden gems and captivating treasures.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="service text-center">
+            <span class="icon-user"></span>
+            <h3>A New Moments of Life</h3>
+            <p>Experience the allure of new moments in life through our carefully crafted travel encounters, adding unforgettable chapters to your personal journey.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="service text-center">
+            <span class="icon-support"></span>
+            <h3>Joy To Your Journey</h3>
+            <p>Infuse joy into every step of your journey with our expertly designed travel packages, ensuring cherished memories and authentic experiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2 class="section-title text-center mb-3">More Services</h2>
+          <p>Unlock a world of possibilities with our comprehensive range of services. From seamless travel logistics and diverse accommodation options to immersive guided tours and culinary delights, we go beyond to cater to every traveler's need. Whether you're seeking adventure, cultural exploration, or relaxation, our personalized itineraries and expert guidance will ensure a truly enriched travel experience. Elevate your journey with our visa assistance services, travel insurance options, and 24/7 customer support, making your exploration of Bangladesh and beyond smooth and unforgettable.</p>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-lg-4 order-lg-1">
+          <div class="h-100"><div class="frame h-100"><div class="feature-img-bg h-100" style="background-image: url('static/images/hero-slider-1.jpg' ) ;"></div></div></div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
+
+          <div class="feature-1 d-md-flex">
+            <div class="align-self-center">
+              <span class="flaticon-house display-4 text-primary"></span>
+              <h3>Beautiful Condo</h3>
+              <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+            </div>
+          </div>
+
+          <div class="feature-1 ">
+            <div class="align-self-center">
+              <span class="flaticon-restaurant display-4 text-primary"></span>
+              <h3>Restaurants & Cafe</h3>
+              <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3" >
+
+          <div class="feature-1 d-md-flex">
+            <div class="align-self-center">
+              <span class="flaticon-mail display-4 text-primary"></span>
+              <h3>Easy to Connect</h3>
+              <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+            </div>
+          </div>
+
+          <div class="feature-1 d-md-flex">
+            <div class="align-self-center">
+              <span class="flaticon-phone-call display-4 text-primary"></span>
+              <h3>24/7 Support</h3>
+              <p class="mb-0">Even the all-powerful Pointing has no control about the blind texts.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5 cta-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
+          <p class="mb-4 lead text-white text-white-opacity"></p>
+          <p class="mb-0"><a href="/contact/viewContact/" class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
